@@ -30,7 +30,7 @@ CONTAINERFILE ?= Dockerfile
 OCI_TAGS += --tag=${REGISTRY}/${REPOSITORY}/${IMAGE}:${VERSION}
 OCI_BUILDARGS += --build-arg=VERSION=${VERSION}
 
-GOFLAGS ?=
+GOFLAGS += -trimpath
 LDFLAGS += -X ${MODULE_NAME}/pkg/version.Version=${VERSION}
 GO_SETTINGS += CGO_ENABLED=0
 

@@ -24,6 +24,7 @@ clean: # Cleanup the test environment.
 
 .PHONY: test
 test: # Run end-to-end tests.
+	go test -v -tags=e2e ./e2e
 
 .PHONY: help
 help: # Show help for each of the Makefile recipes.
